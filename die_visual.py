@@ -4,8 +4,12 @@ from die import Die
 die = Die()
 
 # Make some rolls, and store results in a list.
-results = []
-for roll in range(100):
-    results.append(die.roll())
+results = die.roll_x_times(10_000)
 
-print(results)
+# Analyze results.
+frequencies = []
+for side in range(1, die.num_sides+1):
+    counts = results.count(side)
+    frequencies.append(counts/10_000)
+
+print(frequencies)

@@ -10,3 +10,10 @@ class Die:
     def roll(self):
         """Generates a random value between 1 and num_sides."""
         return randint(1, self.num_sides)
+
+    def roll_x_times(self, times=1000):
+        """Return results of rolling the die x times."""
+        results = []
+        for time in range(times):
+            results.append(self.roll())
+        return results
