@@ -15,11 +15,14 @@ for time in range(1, times+1):
 
 # Analyze results.
 results_range = sorted(set(results))
-print(set(results))
+"""
 frequencies = []
 for result in results_range:
     counts = results.count(result)
     frequencies.append(counts/times)
+"""
+# Frequencies with 'list comprehension' syntax:
+frequencies = [results.count(result)/times for result in results_range]
 
 # Visualize the results.
 x_values = results_range
