@@ -78,6 +78,9 @@ target/
 #   install all needed dependencies.
 #Pipfile.lock
 
+# html Plotly output
+.html
+
 # celery beat schedule file
 celerybeat-schedule
 
